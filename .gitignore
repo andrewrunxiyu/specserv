@@ -133,3 +133,9 @@ README.aux
 README.log
 README.pdf
 README.tex
+
+# PyCharm Idiotic Stuff
+.idea/*
+
+# Configuration files
+config.yaml
