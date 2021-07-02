@@ -1,0 +1,40 @@
+# Configuration file for Special Services
+
+# How are we going to connect to the upstream?
+connection:
+  # Which host are we going to connect to?
+  host: irc.andrewyu.org
+  # Are we going to use SSL/TLS? This is strongly recommended unless if you're connecting to localhost.
+  ssl: true
+  port: 7005
+
+# What is the upstream server information?
+remoteserver:
+  name: irc.andrewyu.org
+  sid: 908
+  # The 'pass' below is the password that should be received by the script from uplink.
+  pass: nil
+
+# What should we call ourselves?
+localserver:
+  name: spec.andrewyu.org
+  sid: 502
+  # This 'pass' is the password that this script sends to the uplink.
+  pass: nil
+
+# What should the main service call itself, along with other information?
+mainclient:
+  # This much be under the scope of localserver.sid, i.e., if that was 502, this should be 502XXXXXX, where X is an
+  # alphanumeric. Usually by convention, they go like AAAAAA, then AAAAAB, then AAAAAC, etc.
+  uid: 502AAAAAA
+  # What nickname do you want the main service client to have?
+  nick: SpecServ
+  # What ident/username do you want it to have?
+  ident: SpecServ
+  # What host do you want it to have? Choose something like "spec/$nick", "services/$nick", "$localserver.name", etc.
+  host: services/SpecServ
+
+# Which people should be able to access the functionality of this script?
+access:
+  # Which type of operators should be allowed to use this
+  opertype: NetAdmin
