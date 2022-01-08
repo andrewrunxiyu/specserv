@@ -1,5 +1,7 @@
 # SpecServ
 
+# Archived.  https://project.andrewyu.org might have one in progress, sometime.
+
 ## Intention
 These scripts (will) provide custom services for InspIRCd. The aim it to be lightweight, modular, and extremely easy to
 work with, i.e., extremely easy to write new modules for.
